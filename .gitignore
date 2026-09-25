@@ -1,0 +1,10 @@
+build/
+dist/
+*.class
+*.jar
+packaging-temp/
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
