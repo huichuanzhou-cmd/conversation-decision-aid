@@ -17,18 +17,18 @@ java -cp build/classes:build/test-classes LocalizationTest
 jar --create --file build/package-input/ConversationDecisionAid.jar --main-class ConversationDecisionAid -C build/classes .
 
 if [[ "$platform" == "macos" ]]; then
-  jpackage --type dmg --name ConversationDecisionAid --app-version 0.3.1 \
+  jpackage --type dmg --name ConversationDecisionAid --app-version 1.0.0 \
     --input build/package-input --main-jar ConversationDecisionAid.jar \
     --main-class ConversationDecisionAid --dest dist
   packages=(dist/*.dmg)
-  mv "${packages[0]}" dist/ConversationDecisionAid-v0.3.1-macOS.dmg
-  echo 'Created dist/ConversationDecisionAid-v0.3.1-macOS.dmg'
+  mv "${packages[0]}" dist/ConversationDecisionAid-v1.0.0-macOS.dmg
+  echo 'Created dist/ConversationDecisionAid-v1.0.0-macOS.dmg'
 else
-  jpackage --type deb --name ConversationDecisionAid --app-version 0.3.1 \
+  jpackage --type deb --name ConversationDecisionAid --app-version 1.0.0 \
     --input build/package-input --main-jar ConversationDecisionAid.jar \
     --main-class ConversationDecisionAid --dest dist \
     --linux-package-name conversation-decision-aid --linux-shortcut
   packages=(dist/*.deb)
-  mv "${packages[0]}" dist/ConversationDecisionAid-v0.3.1-Linux.deb
-  echo 'Created dist/ConversationDecisionAid-v0.3.1-Linux.deb'
+  mv "${packages[0]}" dist/ConversationDecisionAid-v1.0.0-Linux.deb
+  echo 'Created dist/ConversationDecisionAid-v1.0.0-Linux.deb'
 fi

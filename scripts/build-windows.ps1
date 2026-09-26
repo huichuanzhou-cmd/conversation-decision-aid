@@ -29,8 +29,8 @@ if (Test-Path -LiteralPath $appImage) {
     Remove-Item -LiteralPath $appImage -Recurse -Force
 }
 
-jpackage --type app-image --name ConversationDecisionAid --app-version 0.3.1 --input build/package-input --main-jar ConversationDecisionAid.jar --main-class ConversationDecisionAid --dest dist
+jpackage --type app-image --name ConversationDecisionAid --app-version 1.0.0 --input build/package-input --main-jar ConversationDecisionAid.jar --main-class ConversationDecisionAid --dest dist
 if ($LASTEXITCODE -ne 0) { throw 'Windows application image creation failed.' }
 
-Compress-Archive -LiteralPath 'dist/ConversationDecisionAid' -DestinationPath 'dist/ConversationDecisionAid-v0.3.1-Windows-x64.zip' -Force
-Write-Output 'Created dist/ConversationDecisionAid-v0.3.1-Windows-x64.zip'
+Compress-Archive -LiteralPath 'dist/ConversationDecisionAid' -DestinationPath 'dist/ConversationDecisionAid-v1.0.0-Windows-x64.zip' -Force
+Write-Output 'Created dist/ConversationDecisionAid-v1.0.0-Windows-x64.zip'

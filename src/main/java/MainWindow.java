@@ -43,7 +43,7 @@ public class MainWindow extends JFrame {
         this.language = language;
         optionPanels = new ArrayList<OptionPanel>();
 
-        setTitle(text("app.title") + " v0.3.1");
+        setTitle(text("app.title") + " v1.0.0");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(1240, 800);
         setMinimumSize(new Dimension(980, 650));
@@ -218,7 +218,7 @@ public class MainWindow extends JFrame {
     }
 
     private void showAbout() {
-        String about = text("app.title") + " v0.3.1\n\n"
+        String about = text("app.title") + " v1.0.0\n\n"
                 + text("help.about") + "\n\n"
                 + text("help.shared_importance") + "\n"
                 + text("help.overlap") + "\n\n"

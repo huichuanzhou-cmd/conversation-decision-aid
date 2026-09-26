@@ -1,6 +1,8 @@
-# Conversation Decision Aid v0.3.1
+# Conversation Decision Aid v1.0.0
 
 **Status: early hobby prototype.** A tiny, offline Java Swing program for experimenting with transparent decision scoring. It is a thinking aid, not a scientifically validated predictor, psychological assessment, or objective way to choose. Weighted decision matrices and expected-utility tools already exist; this project is a small, readable experiment.
+
+v1.0.0 is the first public release. Earlier 0.x versions were development builds.
 
 Each factor can have **both** a possible benefit and a possible harm. You enter the probabilities, impacts, and personal importance. The program only performs arithmetic on those entries. It has no accounts, cloud service, AI, NLP, or telemetry.
 
@@ -73,9 +75,9 @@ The Windows script compiles, runs both tests, creates a JAR, and packages the ap
 
 | System | Command | Output |
 | --- | --- | --- |
-| Windows x64 | `powershell -File scripts/build-windows.ps1` | `dist/ConversationDecisionAid-v0.3.1-Windows-x64.zip` with `.exe` and runtime |
-| macOS | `bash scripts/build-unix.sh macos` | `dist/ConversationDecisionAid-v0.3.1-macOS.dmg` |
-| Ubuntu Linux | `bash scripts/build-unix.sh linux` | `dist/ConversationDecisionAid-v0.3.1-Linux.deb` |
+| Windows x64 | `powershell -File scripts/build-windows.ps1` | `dist/ConversationDecisionAid-v1.0.0-Windows-x64.zip` with `.exe` and runtime |
+| macOS | `bash scripts/build-unix.sh macos` | `dist/ConversationDecisionAid-v1.0.0-macOS.dmg` |
+| Ubuntu Linux | `bash scripts/build-unix.sh linux` | `dist/ConversationDecisionAid-v1.0.0-Linux.deb` |
 
 Ubuntu needs `fakeroot` for DEB packaging (`sudo apt-get install fakeroot`). `jpackage` builds native packages on the matching operating system. The Windows ZIP is a portable application folder, not an installer. The macOS DMG is unsigned and may trigger Gatekeeper; signing and notarization are future work. GitHub Actions runs the same tests and operating-system-specific scripts on Windows, macOS, and Ubuntu runners, then uploads artifacts. Local builds on one system do not verify the other systems.
 
@@ -106,10 +108,10 @@ The program calculates only from the values you provide. Inaccurate assumptions 
 
 Overlapping factors can double-count the same consequence. The user must decide which factors describe distinct effects.
 
-## v0.3.1 changes
+## v1.0.0 first public release
 
-v0.3.0 introduced simultaneous possible Benefit and Harm, 20 languages, and five factor categories. This focused v0.3.1 release shares preset Importance correctly across options, makes directional factor labels more neutral, improves English and the Chinese/Japanese wording, and explains the risk of double-counting.
+The v0.3.0 development build introduced simultaneous possible Benefit and Harm, 20 languages, and five factor categories. The v0.3.1 development build shared preset Importance correctly across options, made directional factor labels more neutral, improved English and the Chinese/Japanese wording, and explained the risk of double-counting. These improvements are included in the first public release.
 
 ## Future ideas
 
-Save and load decisions as JSON; import/export; charts; sensitivity analysis; uncertainty ranges and confidence in estimates; Monte Carlo exploration; reusable templates; RTL language support; accessibility improvements; signed and notarized releases. These are not part of v0.3.1.
+Save and load decisions as JSON; import/export; charts; sensitivity analysis; uncertainty ranges and confidence in estimates; Monte Carlo exploration; reusable templates; RTL language support; accessibility improvements; signed and notarized releases. These are not part of v1.0.0.
